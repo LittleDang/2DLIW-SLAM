@@ -1,0 +1,128 @@
+laser_topic: "/scan"
+wheel_odom_topic: "/odom"
+imu_topic: "/d400/imu0"
+camera_topic: "/d400/color/image_raw"
+
+enable_camera: false  #false
+enable_laser: true
+enable_camera_vis: true
+enable_laser_vis: true
+
+
+
+T_imu_to_wheel: [ 0.0040697, -0.9998940, -0.0139789 , -0.061  ,
+                 0.0099712,  0.0140189, -0.9998520 ,  0.919  ,
+                  0.9999420,  0.0039297,  0.0100272, -0.224  ,
+                  0.0       , 0.0       ,  0.0       ,  1.0 ]
+
+   
+
+T_imu_to_camera: [ 0.9999740    , -0.0039879, -0.0060079  ,  -0.020  ,
+                   0.0040119,  0.9999840,  0.0039879  ,   0.005  ,
+                  0.0059919, -0.0040119,  0.9999740 ,   0.011  ,
+                  0.0       ,   0.0        ,   0.0          ,   1.0]
+
+
+
+
+T_imu_to_laser: [  0.0019070, -0.9999900,  0.0040438 ,  0.024,
+                  0.0459794, -0.0039519, -0.9989346  ,  -0.078,
+                   0.9989406,  0.0020909,  0.0459714 ,  -0.071,
+                   0.0       ,   0.0       ,   0.0       ,  1.0 ]
+    
+camera_K: [ 611.45 , 0.0     , 433.203 ,
+            0.0    , 611.485 , 249.473 ,
+            0.0    , 0.0     , 1.0     ]
+
+FPS: 1000
+
+g: 9.8
+
+
+#noise
+#each second
+imu_noise_acc_sigma: [ 0.0163  ,0.0163  , 0.0163  ]
+imu_bias_acc_sigma:  [ 0.00499 , 0.00499  , 0.00499 ]
+imu_noise_gyro_sigma: [ 0.003208 , 0.003208   , 0.003208  ]
+imu_bias_gyro_sigma:  [ 0.000499 , 0.000499  , 0.000499 ]
+
+#per meter
+# len dir yaw
+wheel_sigma: [0.5 , 99999.0 , 999.99]
+
+
+
+#each pixel
+camera_sigma: [ 20.0, 20.0 ]
+max_camera_reproject_error: 20
+max_camera_feature_dis: 50.0
+
+
+#manifold noise
+manifold_p_sigma: 0.01    #m
+#manifold_q_sigma: 0.00001    #rad
+manifold_q_sigma: 0.0005    #rad
+
+
+#tracking
+max_feature_num: 5
+feature_min_dis: 50.0
+
+
+#Initialization parameters
+slide_window_size : 10
+p_motion_threshold : 0.1
+q_motion_threshold : 0.05
+
+
+#laser parameters
+w_laser_each_scan: 100.0
+h_laser_each_scan: 100.0
+laser_resolution: 0.05 
+
+#meter
+line_continuous_threshold: 0.1
+line_min_len: 0.05
+line_max_dis: 0.03
+
+#degree
+line_max_tolerance_angle: 175.0
+line_to_line_sigma: 0.001
+
+
+#keyfram param
+key_frame_p_motion_threshold : 0.05
+key_frame_q_motion_threshold : 0.05
+
+
+#laser loop
+a_res: 0.03  
+d_res: 0.03
+submap_count: 30
+laser_loop_min_match_threshold: 5
+loop_detect_min_interval: 100
+verify_loop_rate: 0.5
+loop_max_dis: 1.0
+loop_edge_k: 10.0
+loop_max_tf_p: 1.0
+loop_max_tf_q: 0.5
+
+loop_sigma_p: [0.1, 0.1, 0.1]
+loop_sigma_q: [0.01, 0.01, 0.01]
+
+#backend
+use_ground_p_factor: true
+use_ground_q_factor: true
+
+
+
+#front end
+ref_motion_filter_p: 0.01
+ref_motion_filter_q: 0.01
+ref_n_accumulation: 2
+fast_mode: false
+
+
+#ouput
+output_tum: false
+output_dir: "/home/ubuntu/bag/office1-1_7-rosbag/5/"
