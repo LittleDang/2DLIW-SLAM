@@ -14,11 +14,11 @@
 
 后端部分使用位姿图，唯一创新的地方在于改进了之前的研一发表的论文[《基于全局特征点匹配的全局定位方法》](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKu87-SJxoEJu6LL9TJzd50nS5QmOCQhBuPsjALI6Lv67j6KttBYx8CQ1P4eBo2UeDgakY4XEWQm3&uniplatform=NZKPT)所提出的重定位算法，将之应用于回环检测。
 
+## 运行效果
+
 ### 视频效果
 
 [![](https://i0.hdslb.com/bfs/archive/3820d785c07d34bd47fd24d873163d0df9ee9231.jpg@320w_200h)](https://www.bilibili.com/video/BV1K24y1E7eK/?vd_source=a2e7f1803695cee5e5b621196f5bc8f4)
-
-## 运行效果
 
 ### 实际场景
 
@@ -101,4 +101,4 @@ catkin_make -j
 
 [Apache-2.0 license](https://github.com/LittleDang/2DLIW-SLAM/blob/main/LICENSE)
 
-email: brucedang2022@163.com
+Email: brucedang2022@163.com
