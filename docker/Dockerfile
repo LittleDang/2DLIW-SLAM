@@ -1,6 +1,6 @@
 FROM ros:noetic
 
-LABEL maintainer="dang 857551494@qq.com"
+LABEL maintainer="dang brucedang2022@163.com"
 ENV USERNAME=ubuntu
 ENV PASSWORD=qwer
 
