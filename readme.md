@@ -1,4 +1,5 @@
 # 2DLIW-SLAM
+[中文点我](https://github.com/LittleDang/2DLIW-SLAM/blob/main/README_cn.md)
 
 ## Introduction
 
