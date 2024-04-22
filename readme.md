@@ -96,8 +96,6 @@ catkin_make -j
 
 * **Of course, in terms of code implementation and theory, it may be immature or even wrong. If you find it, please discuss it with me. I am happy to accept amendments.**
 
-* Finally, job hunting. . .
-
 ## License
 
 [Apache-2.0 license](https://github.com/LittleDang/2DLIW-SLAM/blob/main/LICENSE)
