@@ -2,6 +2,7 @@
 [中文点我](https://github.com/LittleDang/2DLIW-SLAM/blob/main/README_cn.md)
 
 ## Introduction
+[Paper](https://iopscience.iop.org/article/10.1088/1361-6501/ad3ea3/meta)
 
 This is a SLAM framework proposed by my master's thesis, which tightly couples the data of 2D lidar, IMU and wheel odometry.
 
